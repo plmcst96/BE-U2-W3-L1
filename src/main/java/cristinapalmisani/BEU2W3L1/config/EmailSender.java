@@ -1,6 +1,6 @@
 package cristinapalmisani.BEU2W3L1.config;
 
-import cristinapalmisani.BEU2W2P2.entities.User;
+import cristinapalmisani.BEU2W3L1.entities.User;
 import kong.unirest.HttpResponse;
 import kong.unirest.JsonNode;
 import kong.unirest.Unirest;
