@@ -74,4 +74,10 @@ public class UserService {
         userRepositoryDAO.save(user);
         return url;
     }
+
+    public User findByEmail(String email) throws NotFoundException {
+        return userRepositoryDAO.findByEmail(email).orElseThrow(() -> new NotFoundException("Utente con email " + email + " non trovata!"));
+    }
+
+
 }

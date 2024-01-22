@@ -19,6 +19,11 @@ public class ExceptionHandler {
     public ErrorPayload handleNotFound(NotFoundException e) {
         return new ErrorPayload(e.getMessage(), new Date());
     }
+    @org.springframework.web.bind.annotation.ExceptionHandler(UnauthorizeException.class)
+    @ResponseStatus(HttpStatus.UNAUTHORIZED) // 401
+    public ErrorPayload handleUnauthorized(UnauthorizeException e) {
+        return new ErrorPayload(e.getMessage(), new Date());
+    }
 
     @org.springframework.web.bind.annotation.ExceptionHandler(BadRequestException.class)
     @ResponseStatus(HttpStatus.BAD_REQUEST)
